@@ -1,0 +1,184 @@
+@use 'ui/responsive';
+
+.appContainer {
+    max-width: var(--size-page-width);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.app {
+    position: relative;
+    z-index: 1;
+}
+
+
+.networkStatsGrid {
+    display: grid;
+    grid-template-columns: 2fr minmax(0, 1fr) minmax(0, 1fr) ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+    > div:first-child {
+        grid-row: 1/4;
+    }
+
+    > div {
+        max-width: 100%;
+        word-breaK: break-all;
+
+        > img {
+            object-fit: contain;
+            max-width: 100%;
+        }
+    }
+
+    @include responsive.tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+
+        > div:first-child {
+            grid-row: 1/1;
+            grid-column: 1/3;
+        }
+    }
+
+    @include responsive.mobile {
+        display: flex;
+        flex-direction: column;
+
+        > div:first-child {
+        }
+    }
+}
+
+.economicStatsSection {
+    display: flex;
+
+    > div {
+        margin: 0 15px 0 0;
+    }
+
+    > div:first-child {
+        flex: 0 0 40%;
+    }
+
+    > div:nth-child(2) {
+        flex: 0 0 21.8%;
+    }
+
+    > div:nth-child(3) {
+        flex: 0 0 21.8%;
+    }
+
+    @include responsive.tablet {
+        display: grid;
+
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        > div {
+            margin-right: 0;
+        }
+
+        > div:first-child {
+            grid-column: 1/3;
+            margin-bottom: 15px;
+        }
+
+        > div:nth-child(2) {
+            margin-right: 6px;
+        }
+
+        > div:nth-child(3) {
+            margin-left: 6px;
+            margin-right: 0;
+        }
+    }
+
+    @include responsive.mobile {
+        flex-direction: column;
+        margin: unset;
+
+        > div {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
+}
+
+.dappsSection {
+    display: flex;
+
+    > div {
+        flex: 0 0 19.5%;
+        margin: 0 15px 0 0;
+    }
+
+    @include responsive.tablet {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+
+        > div {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+
+        > div:nth-child(odd) {
+            margin-right: 6px;
+        }
+
+        > div:nth-child(even) {
+            margin-left: 6px;
+        }
+    }
+
+    @include responsive.mobile {
+        flex-wrap: wrap;
+
+        > div {
+            margin-bottom: 15px;
+            flex: 1 1 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+.neonBackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    filter: blur(5em);
+    z-index: 1;
+    animation: 9s infinite alternate pulse;
+}
+
+
+.footerInner {
+    max-width: var(--size-page-width);
+    margin: 0 auto;
+    padding-top: 30px;
+
+    > div:last-child {
+        margin: 60px auto 0 auto;
+        width: max-content;
+        color: #767579;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}

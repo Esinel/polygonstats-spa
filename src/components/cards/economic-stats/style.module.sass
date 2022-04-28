@@ -1,0 +1,62 @@
+@use 'src/ui/responsive'
+
+.container
+  padding: 33px
+  background-color: var(--bg-card-color)
+  box-shadow: var(--bg-card-shadow)
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.header
+  height: 90px
+  display: flex
+  justify-content: space-between
+  align-content: center
+  align-items: flex-start
+
+  @include responsive.mobile
+    flex-direction: column
+    margin-bottom: 30px
+
+
+.logoWrapper
+  max-width: 100px
+  margin-top: 4.5px
+
+.navWrapper
+  display: flex
+  height: 60px
+
+  @include responsive.mobile
+    margin-top: 15px
+
+  > button
+    all: unset
+    height: min-content
+    padding: 9px 15px
+    margin: 0 3px
+    border: 1px solid transparent
+
+    @include responsive.mobile
+      padding: 4px 9px
+
+  > button:hover
+    border: 1px solid white
+    cursor: pointer
+
+
+.metricsContainer
+  display: flex
+  height: 100px
+  > div
+    margin-right: 5%
+
+  @include responsive.mobile
+    flex-direction: column
+    height: 100%
+    margin-bottom: 15px
+
+
+.btnActive
+  border: 1px solid white !important

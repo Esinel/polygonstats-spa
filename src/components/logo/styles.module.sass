@@ -1,0 +1,12 @@
+@use 'src/ui/responsive'
+
+.logo
+  max-width: 250px
+  max-height: 100px
+  padding: 15px
+
+  @include responsive.mobile
+    margin-bottom: 45px
+
+  >img:nth-child(2)
+    margin-left: 10px

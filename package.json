@@ -1,0 +1,40 @@
+{
+  "name": "polygonstats",
+  "version": "1.0.0",
+  "description": "Cryptocurrencies metrics SPA",
+  "main": "index.js",
+  "repository": "https://github.com/Esinel/polygonstats-spa.git",
+  "author": "Stefanos",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "css-loader": "^5.2.5",
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^6.0.0",
+    "react-hot-loader": "^4.13.0",
+    "regenerator-runtime": "^0.13.7",
+    "sass": "^1.34.0",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "svg-url-loader": "^7.1.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

@@ -1,0 +1,109 @@
+:root {
+    /*global variables SUPREME SCOPE*/
+    --bg-main-color: #1F1F1F;
+    --bg-card-color: rgba(9, 9, 10, 0.76);
+    --bg-card-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    --green-color: #8AE63C;
+    --red-color: #FE5850;
+    --txt-gray-color: #CFCFD1;
+    --bg-footer-color: #2D2B30;
+    --size-page-width: 1400px;
+}
+
+html, body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-main-color);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: 0.3s ease;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+footer {
+    min-height: 500px;
+    background-color: var(--bg-footer-color);
+    padding: 30px;
+    margin-top: 90px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:active {
+    color: unset;
+}
+
+a:visited {
+    color: unset;
+}
+
+.arrow {
+    width: 10px;
+    height: 5px;
+    padding: 5px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 90px;
+}
+
+@media screen and (max-width: 900px) {
+    .title {
+        margin-top: 45px;
+    }
+}
+
+button {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    margin-top: 18px;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--bg-card-color);
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.timeline-Widget {
+    background-color: transparent !important;
+}
+
+.underline-link-rail {
+    width: max-content;
+}
+
+
+.underline-link-rail::after {
+    content: '';
+    display: block;
+    margin: 2px 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #8247E5 0%, #35D0C9 100%);
+    transition: 0.15s ease-in-out;
+}
+
+.underline-link-rail:hover::after {
+    width: 100%
+}
